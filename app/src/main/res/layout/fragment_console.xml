@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    fragment_console.xml
+    Merged UI: Terminal/Console Theme + Functional Console Elements
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050507"
+    android:padding="12dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#08080C"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:strokeColor="#1A00E5FF"
+        app:strokeWidth="1.2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ========================================== -->
+            <!-- 1. HEADER (TERMINAL STYLE)                 -->
+            <!-- ========================================== -->
+            <LinearLayout
+                android:id="@+id/console_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#12121A"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/circle_shape"
+                    android:backgroundTint="#FF5F56" />
+                
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/circle_shape"
+                    android:backgroundTint="#FFBD2E" />
+                
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/circle_shape"
+                    android:backgroundTint="#27C93F" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="TURBO_STREAM_DEBUGER"
+                    android:textColor="#00E5FF"
+                    android:textSize="9sp"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="0.2"/>
+                
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STREEMING_ON"
+                    android:textColor="#446272A4"
+                    android:textSize="8sp"
+                    android:fontFamily="monospace"
+                    android:layout_marginEnd="10dp"/>
+            </LinearLayout>
+
+            <!-- PIT info row -->
+            <TextView
+                android:id="@+id/tv_pit_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/console_header"
+                android:background="#0D0D14"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="PIT: waiting for device..."
+                android:textColor="#BD93F9"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:visibility="visible" />
+
+            <!-- ========================================== -->
+            <!-- 2. SCROLLABLE LOG OUTPUT                   -->
+            <!-- ========================================== -->
+            <!-- تم تعديل الـ ID إلى scroll_log ليطابق الجافا -->
+            <ScrollView
+                android:id="@+id/scroll_log"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_pit_status"
+                android:layout_above="@+id/log_footer_action"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="12dp"
+                android:scrollbarThumbVertical="@color/neon_cyan"
+                android:fadeScrollbars="false"
+                android:fillViewport="true">
+
+                <!-- تم تعديل الـ ID إلى tv_log ليطابق الجافا -->
+                <TextView
+                    android:id="@+id/tv_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="6dp"
+                    android:text="> TURBO_ENGINE_V5_INITIALIZED\n> SYSTEM_READY_FOR_DATA_PUSHING..."
+                    android:textColor="#BD93F9"
+                    android:textSize="11.5sp"
+                    android:textIsSelectable="true" />
+            </ScrollView>
+
+            <!-- ========================================== -->
+            <!-- 3. FOOTER ACTION                           -->
+            <!-- ========================================== -->
+            <RelativeLayout
+                android:id="@+id/log_footer_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="8dp"
+                android:background="#0A0A0F">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="PROPRIETARY ODIN HANDLER V5"
+                    android:textColor="#336272A4"
+                    android:textSize="8sp"
+                    android:fontFamily="monospace"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_clear_log"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/btn_clear_log"
+                    android:textColor="#00E5FF"
+                    android:textSize="10sp"
+                    android:fontFamily="sans-serif-black"
+                    app:cornerRadius="10dp"
+                    app:rippleColor="#1A00E5FF"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

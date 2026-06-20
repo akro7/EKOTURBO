@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020204"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="550dp"
+        android:layout_height="550dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-320dp"
+        android:background="@drawable/neon_glow_radial_cyan"
+        android:alpha="0.12" />
+
+    <View
+        android:layout_width="550dp"
+        android:layout_height="550dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-80dp" 
+        android:layout_marginEnd="-320dp"
+        android:background="@drawable/neon_glow_radial_purple"
+        android:alpha="0.12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="60dp" android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:id="@+id/main_logo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="0.05"
+                    android:text="EKO TURBO"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:id="@+id/engine_status_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:letterSpacing="0.25"
+                    android:text="LOKE STREAMING • ENGINE V5.0"
+                    android:textColor="#00E5FF"
+                    android:textSize="8.5sp"
+                    android:fontFamily="sans-serif-black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/transfer_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="false" android:layout_marginTop="12dp" android:paddingHorizontal="16dp"
+                android:paddingVertical="9dp"
+                android:background="@drawable/speed_tag_bg" 
+                android:text="0.0 MB/s"
+                android:textColor="#BD93F9"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/status_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#0D0D14" 
+            app:cardCornerRadius="32dp"
+            app:cardElevation="25dp"
+            app:strokeColor="#1AFFFFFF"
+            app:strokeWidth="1.2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="22dp">
+
+                <ImageView
+                    android:id="@+id/usb_icon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@android:drawable/stat_sys_data_bluetooth" 
+                    app:tint="#00E5FF" />
+
+                <TextView
+                    android:id="@+id/status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/usb_icon"
+                    android:text="DATA LINK STATUS"
+                    android:textColor="#6272A4"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.15"
+                    android:fontFamily="sans-serif-black"/>
+
+                <TextView
+                    android:id="@+id/battery_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="BAT: --%"
+                    android:textColor="#6272A4"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:id="@+id/device_info_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/usb_icon"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+                    
+                    <TextView
+                        android:id="@+id/device_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="IDLE_LINK"
+                        android:textColor="#6272A4"
+                        android:textSize="32sp" />
+                        
+                    <TextView
+                        android:id="@+id/device_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PUSHING BINARY DATA VIA ODIN PROTOCOL"
+                        android:textColor="#30FFFFFF"
+                        android:textSize="9sp"
+                        android:letterSpacing="0.05"
+                        android:fontFamily="monospace" />
+                </LinearLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/main_progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/device_info_container"
+                    android:layout_marginTop="35dp"
+                    android:layout_toStartOf="@+id/progress_percent"
+                    android:layout_marginEnd="18dp"
+                    app:indicatorColor="#00E5FF"
+                    app:trackColor="#12FFFFFF"
+                    app:trackThickness="16dp"
+                    app:trackCornerRadius="10dp"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/progress_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBottom="@id/main_progress_bar"
+                    android:layout_marginBottom="-12dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="0%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="42sp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:overScrollMode="never" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#050508"
+            app:itemIconSize="22dp"
+            app:itemIconTint="@color/nav_item_color_state"
+            app:itemTextColor="@color/nav_item_color_state"
+            app:itemRippleColor="#15FFFFFF"
+            app:elevation="20dp"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>
+</RelativeLayout>

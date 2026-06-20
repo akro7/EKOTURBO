@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- جسم العنكبوت - أحمر neon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+
+    <!-- أرجل العنكبوت - يسار -->
+    <path android:pathData="M28,28 Q10,18 4,8"
+        android:strokeColor="#CC3300" android:strokeWidth="2" android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"/>
+    <path android:pathData="M25,35 Q8,30 2,22"
+        android:strokeColor="#CC3300" android:strokeWidth="2" android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"/>
+    <path android:pathData="M25,45 Q8,50 2,58"
+        android:strokeColor="#CC3300" android:strokeWidth="2" android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"/>
+    <path android:pathData="M28,52 Q10,62 4,72"
+        android:strokeColor="#CC3300" android:strokeWidth="2" android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"/>
+
+    <!-- أرجل العنكبوت - يمين -->
+    <path android:pathData="M52,28 Q70,18 76,8"
+        android:strokeColor="#CC3300" android:strokeWidth="2" android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"/>
+    <path android:pathData="M55,35 Q72,30 78,22"
+        android:strokeColor="#CC3300" android:strokeWidth="2" android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"/>
+    <path android:pathData="M55,45 Q72,50 78,58"
+        android:strokeColor="#CC3300" android:strokeWidth="2" android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"/>
+    <path android:pathData="M52,52 Q70,62 76,72"
+        android:strokeColor="#CC3300" android:strokeWidth="2" android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"/>
+
+    <!-- الجسم - بطن دائري -->
+    <ellipse android:fillColor="#1A0000"
+        cx="40" cy="52" rx="12" ry="15"
+        android:strokeColor="#FF3300" android:strokeWidth="1.5"/>
+
+    <!-- الرأس - أصغر -->
+    <ellipse android:fillColor="#1A0000"
+        cx="40" cy="34" rx="9" ry="9"
+        android:strokeColor="#FF3300" android:strokeWidth="1.5"/>
+
+    <!-- العيون - نقطتان حمراء -->
+    <circle android:fillColor="#FF3300" cx="36" cy="32" r="2"/>
+    <circle android:fillColor="#FF3300" cx="44" cy="32" r="2"/>
+
+    <!-- نقط الجسم -->
+    <circle android:fillColor="#FF330044" cx="40" cy="50" r="4"/>
+
+</vector>

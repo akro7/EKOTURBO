@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <string name="app_name">EkoTurbo</string>
+    <string name="main_title">EkoTurbo</string>
+
+    <!-- Bottom navigation tabs -->
+    <string name="tab_flash">Flash</string>
+    <string name="tab_options">Options</string>
+    <string name="tab_log">Log</string>
+
+    <!-- ErosFragment -->
+    <string name="select_firmware_files">Select firmware files</string>
+    <string name="no_files_selected">No files selected</string>
+    <string name="files_selected_count">%d file(s) selected</string>
+    <string name="btn_select_files">Select Files</string>
+    <string name="btn_flash">Flash</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="device_info_default">No device connected</string>
+    <string name="status_idle">Idle — connect a device</string>
+    <string name="error_no_files_selected">Please select firmware files first</string>
+
+    <!-- ConsoleFragment -->
+    <string name="btn_clear_log">Clear</string>
+    <string name="log_empty">No log output yet.</string>
+
+    <!-- OptFragment -->
+    <string name="label_auto_reboot">Auto reboot after flash</string>
+    <string name="label_skip_checksum">Skip SHA-256 checksum</string>
+    <string name="label_wireless">Wireless mode</string>
+    <string name="label_nand_erase">NAND erase</string>
+    <string name="label_pit_file">PIT file</string>
+    <string name="btn_pick_pit">Pick PIT file</string>
+    <string name="btn_lang_select">Language</string>
+    <string name="current_lang_default">English</string>
+
+    <!-- Language picker -->
+    <string name="language_picker_title">Select Language</string>
+
+    <!-- Battery optimization -->
+    <string name="allow_battery_optimization">Please disable battery optimization for best performance</string>
+
+    <!-- Notification permission -->
+    <string name="notification_permission_title">Notification Permission</string>
+    <string name="notification_permission_message">EkoTurbo needs notification permission to show flash progress in the background.</string>
+    <string name="notification_permission_settings">Open Settings</string>
+    <string name="notification_permission_allow">Allow</string>
+    <string name="notification_settings_unavailable">Cannot open notification settings</string>
+
+    <!-- Startup warning -->
+    <string name="startup_warning_title">Warning</string>
+    <string name="startup_warning_message">This application can modify your device firmware. Incorrect use may brick your device. Use at your own risk.</string>
+    <string name="startup_warning_accept">I Understand</string>
+    <string name="startup_warning_exit">Exit</string>
+
+    <!-- Update dialog -->
+    <string name="critical_update">Critical Update Required</string>
+    <string name="optional_update">Update Available</string>
+    <string name="critical_update_desc">Version %s is required. Please update now to continue.</string>
+    <string name="optional_update_desc">Version %s is available. Would you like to update?</string>
+    <string name="update_now">Update Now</string>
+    <string name="later">Later</string>
+    <string name="browser_error">Could not open browser</string>
+    <string name="install_and_restart">Install the update and restart the app</string>
+    <string name="update_mandatory">Update is required to continue</string>
+
+    <!-- Flash service / notifications -->
+    <string name="notification_channel_name">Flash Service</string>
+    <string name="flash_status_preparing">Preparing flash session…</string>
+    <string name="flash_status_flashing">Flashing in progress…</string>
+    <string name="flash_status_done">Flash complete</string>
+    <string name="flash_status_failed">Flash failed</string>
+
+    <!-- Errors -->
+    <string name="error_no_ready_devices">No authorized USB device found</string>
+    <string name="error_session_replaced">Session cancelled — new session started</string>
+
+    <!-- activity_main.xml -->
+    <string name="engine_tag">Engine</string>
+    <string name="transfer_speed_default">0 MB/s</string>
+    <string name="data_link_status">Disconnected</string>
+    <string name="bat_default">---%</string>
+    <string name="idle_link">Idle</string>
+    <string name="odin_protocol">ODIN</string>
+    <string name="pit_pending">Pending…</string>
+
+    <!-- view_opt.xml -->
+    <string name="opt_session_control">Session Control</string>
+    <string name="opt_auto_reboot">Auto Reboot</string>
+    <string name="opt_auto_reboot_desc">Automatically reboot the device after flashing completes</string>
+    <string name="opt_skip_sha">Skip SHA Check</string>
+    <string name="opt_skip_sha_desc">Skip SHA-256 checksum verification (not recommended)</string>
+    <string name="opt_danger_zone">Danger Zone</string>
+    <string name="opt_nand_erase">NAND Erase</string>
+    <string name="opt_nand_erase_desc">Erase all NAND flash partitions before flashing</string>
+    <string name="opt_security_advisory">Security Advisory</string>
+    <string name="opt_nand_warning">⚠ Warning: NAND erase is irreversible and may brick your device if used incorrectly.</string>
+
+    <!-- Wireless -->
+    <string name="wireless_status_session_active">Session active: %s</string>
+    <string name="wireless_status_listening">Listening on %s</string>
+    <string name="wireless_status_starting">Starting wireless server…</string>
+    <string name="wireless_device_label">Wireless Device</string>
+    <string name="wireless_status_connected">Connected: %s</string>
+
+    <!-- Languages -->
+    <string name="language_system_default">System Default</string>
+    <string name="language_en">English</string>
+    <string name="language_ar">العربية</string>
+    <string name="language_de">Deutsch</string>
+    <string name="language_es">Español</string>
+    <string name="language_fa">فارسی</string>
+    <string name="language_fil">Filipino</string>
+    <string name="language_fr">Français</string>
+    <string name="language_hi">हिन्दी</string>
+    <string name="language_in">Indonesia</string>
+    <string name="language_it">Italiano</string>
+    <string name="language_ja">日本語</string>
+    <string name="language_ko">한국어</string>
+    <string name="language_pl">Polski</string>
+    <string name="language_pt">Português</string>
+    <string name="language_ro">Română</string>
+    <string name="language_ru">Русский</string>
+    <string name="language_th">ภาษาไทย</string>
+    <string name="language_tr">Türkçe</string>
+    <string name="language_uk">Українська</string>
+    <string name="language_vi">Tiếng Việt</string>
+    <string name="language_zh">中文</string>
+
+    <!-- Bottom navigation tabs (localized) -->
+    <string name="nav_flash">Flash</string>
+    <string name="nav_opt">Options</string>
+    <string name="nav_log">Log</string>
+    <string name="nav_dev">Dev</string>
+
+    <!-- view_opt.xml hardcoded strings -->
+    <string name="opt_wireless">Wireless Mode</string>
+    <string name="opt_wireless_desc">Flash over Wi-Fi instead of USB</string>
+    <string name="opt_pit_file">PIT File</string>
+    <string name="opt_pit_not_selected">Not selected</string>
+    <string name="opt_browse">Browse</string>
+    <string name="opt_language_section">Language</string>
+    <string name="opt_app_language">App Language</string>
+
+    <!-- view_eros / fragment_eros hardcoded -->
+    <string name="eros_data_stream">DATA STREAM CHANNELS</string>
+    <string name="eros_bl">BL : BOOTLOADER</string>
+    <string name="eros_ap">AP : SYSTEM</string>
+    <string name="eros_cp">CP : BASEBAND</string>
+    <string name="eros_csc">CSC : LOCALIZATION</string>
+    <string name="eros_userdata">USERDATA : STORAGE</string>
+    <string name="eros_start_flash">START FLASH</string>
+    <string name="eros_select_files">Select Files</string>
+
+    <!-- view_log / fragment_console hardcoded -->
+    <string name="log_clear_terminal">CLEAR TERMINAL</string>
+    <string name="log_pit_waiting">PIT: waiting for device…</string>
+
+</resources>

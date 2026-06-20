@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_eros"
+        android:icon="@android:drawable/ic_menu_today" 
+        android:title="Eko" />
+    <item
+        android:id="@+id/nav_opt"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="OPT" />
+    <item
+        android:id="@+id/nav_log"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="LOG" />
+        
+    <item
+        android:id="@+id/nav_dev"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="DEV" />
+
+    <item
+        android:id="@+id/nav_music"
+        android:icon="@drawable/ic_music"
+        android:title="Quran" />
+</menu>

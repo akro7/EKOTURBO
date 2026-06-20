@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    شبكة عنكبوت - نمط neon أحمر على خلفية سوداء
+    مكونة من خطوط شعاعية + دوائر متحدة المركز
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="300dp"
+    android:viewportWidth="300"
+    android:viewportHeight="300">
+
+    <!-- ═══════════════ الخطوط الشعاعية (8 خطوط من المركز) ═══════════════ -->
+    <!-- خط 12 ساعة -->
+    <path android:pathData="M150,150 L150,10"
+        android:strokeColor="#CC3300" android:strokeWidth="1.5" android:fillColor="@android:color/transparent"/>
+    <!-- خط 1:30 -->
+    <path android:pathData="M150,150 L255,45"
+        android:strokeColor="#CC3300" android:strokeWidth="1.5" android:fillColor="@android:color/transparent"/>
+    <!-- خط 3 ساعة -->
+    <path android:pathData="M150,150 L290,150"
+        android:strokeColor="#CC3300" android:strokeWidth="1.5" android:fillColor="@android:color/transparent"/>
+    <!-- خط 4:30 -->
+    <path android:pathData="M150,150 L255,255"
+        android:strokeColor="#CC3300" android:strokeWidth="1.5" android:fillColor="@android:color/transparent"/>
+    <!-- خط 6 ساعة -->
+    <path android:pathData="M150,150 L150,290"
+        android:strokeColor="#CC3300" android:strokeWidth="1.5" android:fillColor="@android:color/transparent"/>
+    <!-- خط 7:30 -->
+    <path android:pathData="M150,150 L45,255"
+        android:strokeColor="#CC3300" android:strokeWidth="1.5" android:fillColor="@android:color/transparent"/>
+    <!-- خط 9 ساعة -->
+    <path android:pathData="M150,150 L10,150"
+        android:strokeColor="#CC3300" android:strokeWidth="1.5" android:fillColor="@android:color/transparent"/>
+    <!-- خط 10:30 -->
+    <path android:pathData="M150,150 L45,45"
+        android:strokeColor="#CC3300" android:strokeWidth="1.5" android:fillColor="@android:color/transparent"/>
+
+    <!-- ═══════════════ حلقات الشبكة المتحدة المركز ═══════════════ -->
+    <!-- حلقة 1 - صغيرة قريبة -->
+    <path android:pathData="
+        M150,115 L179,124 L190,150 L179,176 L150,185 L121,176 L110,150 L121,124 Z"
+        android:strokeColor="#CC3300" android:strokeWidth="1.2"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- حلقة 2 -->
+    <path android:pathData="
+        M150,87 L200,103 L218,150 L200,197 L150,213 L100,197 L82,150 L100,103 Z"
+        android:strokeColor="#BB2200" android:strokeWidth="1.2"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- حلقة 3 -->
+    <path android:pathData="
+        M150,59 L221,82 L246,150 L221,218 L150,241 L79,218 L54,150 L79,82 Z"
+        android:strokeColor="#AA1500" android:strokeWidth="1.2"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- حلقة 4 - خارجية -->
+    <path android:pathData="
+        M150,28 L242,58 L278,150 L242,242 L150,272 L58,242 L22,150 L58,58 Z"
+        android:strokeColor="#881000" android:strokeWidth="1.2"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- ═══════════════ نقطة المركز (glowing) ═══════════════ -->
+    <circle android:fillColor="#FF3300" cx="150" cy="150" r="5"/>
+    <circle android:fillColor="#FF660033" cx="150" cy="150" r="10"/>
+
+</vector>

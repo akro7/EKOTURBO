@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#080A0F">
+
+    <ImageView
+        android:id="@+id/splash_spider_web"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_spider_web"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/splash_spider_body"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/ic_spider_body"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/splash_spider_web"
+        android:layout_marginTop="105dp" />
+
+    <TextView
+        android:id="@+id/splash_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EkoTurbo"
+        android:textColor="#FF00E5FF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.15"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/splash_spider_web"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/splash_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USB Flash Engine"
+        android:textColor="#99AACCDD"
+        android:textSize="13sp"
+        android:letterSpacing="0.25"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/splash_title"
+        android:layout_marginTop="4dp" />
+
+    <View
+        android:layout_width="120dp"
+        android:layout_height="1dp"
+        android:background="#5500E5FF"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp" />
+
+</RelativeLayout>

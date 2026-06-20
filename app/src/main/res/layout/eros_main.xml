@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020204">
+
+    <!-- Neon background glow — cyan left -->
+    <View
+        android:layout_width="550dp"
+        android:layout_height="550dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-320dp"
+        android:background="@drawable/neon_glow_radial_cyan"
+        android:alpha="0.12" />
+
+    <!-- Neon background glow — purple right -->
+    <View
+        android:layout_width="550dp"
+        android:layout_height="550dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-320dp"
+        android:background="@drawable/neon_glow_radial_purple"
+        android:alpha="0.12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Hidden toolbar kept for EkoCore compatibility -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <!-- Fragment host — fills all space above bottom nav -->
+        <FrameLayout
+            android:id="@+id/fragment_host_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Bottom nav container -->
+        <FrameLayout
+            android:id="@+id/bottom_navigation_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:background="#050508" />
+
+    </LinearLayout>
+
+    <!-- USB floating overlay — shown over everything when device connects -->
+    <include
+        android:id="@+id/usb_overlay"
+        layout="@layout/layout_usb_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

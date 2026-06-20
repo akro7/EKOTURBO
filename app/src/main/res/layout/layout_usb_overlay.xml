@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    USB Permission Overlay — يظهر فوق كل حاجة لما جهاز USB يتوصل
+    المشكلة المصلحة: id الـ root كان usb_overlay_root بس الـ include بيجيب id=usb_overlay
+    الحل: خلينا الـ root هو usb_overlay_root عشان findViewById يلاقيه
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/usb_overlay_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AA000000"
+    android:visibility="gone"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="#0D0D14"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="40dp"
+        app:strokeColor="#3300E5FF"
+        app:strokeWidth="1.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp"
+            android:gravity="center">
+
+            <!-- Bluetooth/USB icon -->
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@android:drawable/stat_sys_data_bluetooth"
+                app:tint="#00E5FF"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="USB" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USB DEVICE DETECTED"
+                android:textColor="#00E5FF"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Device name -->
+            <TextView
+                android:id="@+id/usb_overlay_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Samsung Device"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allow EkoTURBO to access this device?"
+                android:textColor="#6272A4"
+                android:textSize="11sp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Buttons row: ALLOW left, DENY right — زي الصورة -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/usb_overlay_allow"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="ALLOW"
+                    android:textColor="#050507"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-black"
+                    app:backgroundTint="#00E5FF"
+                    app:cornerRadius="16dp"
+                    app:rippleColor="#44FFFFFF" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/usb_overlay_deny"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="DENY"
+                    android:textColor="#FF4D4D"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-black"
+                    app:cornerRadius="16dp"
+                    app:rippleColor="#22FF4D4D" />
+
+            </LinearLayout>
+
+            <!-- Always allow checkbox -->
+            <CheckBox
+                android:id="@+id/usb_overlay_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Always allow"
+                android:textColor="#6272A4"
+                android:textSize="12sp"
+                android:buttonTint="#00E5FF" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

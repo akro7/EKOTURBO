@@ -1,0 +1,44 @@
+/*
+ * Copyright (c) 2026 Gabriel2392
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+#pragma once
+
+#include "core/status.hpp"
+#include "protocol/odin/group_flasher.hpp"
+
+#include <array>
+#include <cstdint>
+#include <filesystem>
+#include <string_view>
+#include <vector>
+
+namespace eko::app {
+
+struct Md5Job {
+  std::filesystem::path path;
+  std::filesystem::path identity_path;
+  std::uint64_t identity_size = 0;
+  std::int64_t identity_write_time = 0;
+  std::uint64_t bytes_to_hash = 0;
+  std::array<unsigned char, 16> expected{};
+};
+
+eko::core::Result<std::vector<Md5Job>> md5_jobs(const std::vector<std::filesystem::path>& inputs) noexcept;
+std::string_view md5_verify_name(const std::vector<Md5Job>& jobs) noexcept;
+eko::core::Status md5_verify(const std::vector<Md5Job>& jobs, const eko::odin::Ui& ui) noexcept;
+
+} // namespace eko::app

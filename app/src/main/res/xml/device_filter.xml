@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        ╔══════════════════════════════════════════════════════════════════╗
+        ║  SAMSUNG — Download Mode (Odin/Heimdall)                        ║
+        ║  Vendor ID: 0x04E8 = 1256 (dec)                                 ║
+        ║                                                                  ║
+        ║  المهم: في Download Mode، Samsung بتستخدم product IDs           ║
+        ║  مختلفة عن الـ ADB/MTP. الـ entry بـ vendor-id فقط (بدون       ║
+        ║  product-id) هو الأضمن — بيمسك أي product من نفس الـ vendor    ║
+        ╚══════════════════════════════════════════════════════════════════╝
+    -->
+
+    <!-- Samsung — vendor-only entry يمسك Download Mode تلقائياً -->
+    <usb-device vendor-id="1256" />
+
+    <!-- Samsung Download Mode — Product IDs الموثقة -->
+    <usb-device vendor-id="1256" product-id="26720" />  <!-- 0x6860 — الأكثر شيوعاً (S6+) -->
+    <usb-device vendor-id="1256" product-id="26721" />  <!-- 0x6861 -->
+    <usb-device vendor-id="1256" product-id="26722" />  <!-- 0x6862 -->
+    <usb-device vendor-id="1256" product-id="26724" />  <!-- 0x6864 -->
+    <usb-device vendor-id="1256" product-id="26728" />  <!-- 0x6868 — Galaxy S8/S9 Download Mode -->
+    <usb-device vendor-id="1256" product-id="26730" />  <!-- 0x686A -->
+    <usb-device vendor-id="1256" product-id="26738" />  <!-- 0x6872 — Note series -->
+    <usb-device vendor-id="1256" product-id="26739" />  <!-- 0x6873 -->
+    <usb-device vendor-id="1256" product-id="26740" />  <!-- 0x6874 -->
+    <usb-device vendor-id="1256" product-id="26742" />  <!-- 0x6876 -->
+    <usb-device vendor-id="1256" product-id="26744" />  <!-- 0x6878 -->
+    <usb-device vendor-id="1256" product-id="26746" />  <!-- 0x687A -->
+    <usb-device vendor-id="1256" product-id="26749" />  <!-- 0x687D — S4 -->
+    <usb-device vendor-id="1256" product-id="26750" />  <!-- 0x687E — S5 -->
+    <usb-device vendor-id="1256" product-id="26752" />  <!-- 0x6880 -->
+    <usb-device vendor-id="1256" product-id="26754" />  <!-- 0x6882 -->
+    <usb-device vendor-id="1256" product-id="26756" />  <!-- 0x6884 -->
+    <usb-device vendor-id="1256" product-id="26758" />  <!-- 0x6886 -->
+    <usb-device vendor-id="1256" product-id="26760" />  <!-- 0x6888 -->
+    <usb-device vendor-id="1256" product-id="26762" />  <!-- 0x688A — Note 5 -->
+    <usb-device vendor-id="1256" product-id="26764" />  <!-- 0x688C -->
+    <usb-device vendor-id="1256" product-id="26768" />  <!-- 0x6890 — S6 -->
+    <usb-device vendor-id="1256" product-id="26772" />  <!-- 0x6894 -->
+    <usb-device vendor-id="1256" product-id="26776" />  <!-- 0x6898 -->
+    <usb-device vendor-id="1256" product-id="26780" />  <!-- 0x689C — Note 8 -->
+    <usb-device vendor-id="1256" product-id="26781" />  <!-- 0x689D — S7 -->
+    <usb-device vendor-id="1256" product-id="26784" />  <!-- 0x68A0 — S8 -->
+    <usb-device vendor-id="1256" product-id="26788" />  <!-- 0x68A4 — S8+ -->
+    <usb-device vendor-id="1256" product-id="26792" />  <!-- 0x68A8 — S9 -->
+    <usb-device vendor-id="1256" product-id="26796" />  <!-- 0x68AC — S9+ -->
+    <usb-device vendor-id="1256" product-id="26840" />  <!-- 0x68D8 — A series -->
+    <usb-device vendor-id="1256" product-id="26850" />  <!-- 0x68E2 -->
+    <usb-device vendor-id="1256" product-id="26860" />  <!-- 0x68EC -->
+    <usb-device vendor-id="1256" product-id="26870" />  <!-- 0x68F6 -->
+    <usb-device vendor-id="1256" product-id="26984" />  <!-- 0x6968 — S9/Note9 -->
+    <usb-device vendor-id="1256" product-id="26990" />  <!-- 0x696E — S10 -->
+    <usb-device vendor-id="1256" product-id="26993" />  <!-- 0x6971 — Note 10 -->
+    <usb-device vendor-id="1256" product-id="26997" />  <!-- 0x6975 — S20 -->
+    <usb-device vendor-id="1256" product-id="27000" />  <!-- 0x6978 — Z Fold -->
+    <usb-device vendor-id="1256" product-id="27001" />  <!-- 0x6979 — Z Flip -->
+    <usb-device vendor-id="1256" product-id="27003" />  <!-- 0x697B — Note 20 -->
+    <usb-device vendor-id="1256" product-id="27008" />  <!-- 0x6980 — Z Fold2 -->
+    <usb-device vendor-id="1256" product-id="27010" />  <!-- 0x6982 — S21 -->
+    <usb-device vendor-id="1256" product-id="27011" />  <!-- 0x6983 — S21+ -->
+    <usb-device vendor-id="1256" product-id="27016" />  <!-- 0x6988 — S22 / S23 -->
+    <usb-device vendor-id="1256" product-id="27020" />  <!-- 0x698C — S24 -->
+    <usb-device vendor-id="1256" product-id="28720" />  <!-- 0x7030 — MTP/ADB -->
+    <usb-device vendor-id="1256" product-id="28721" />  <!-- 0x7031 -->
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  QUALCOMM (05C6) — EDL / Fastboot Mode                          -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <usb-device vendor-id="1478" />
+    <usb-device vendor-id="1478" product-id="9025" />
+    <usb-device vendor-id="1478" product-id="9026" />
+    <usb-device vendor-id="1478" product-id="9091" />
+    <usb-device vendor-id="1478" product-id="26720" />
+    <usb-device vendor-id="1478" product-id="26721" />
+    <usb-device vendor-id="1478" product-id="26738" />
+    <usb-device vendor-id="1478" product-id="26739" />
+    <usb-device vendor-id="1478" product-id="26749" />
+    <usb-device vendor-id="1478" product-id="26750" />
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  GOOGLE Pixel / Nexus — Fastboot                                -->
+    <!--  Vendor ID: 0x18D1 = 6353 (dec)                                -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <usb-device vendor-id="6353" />
+    <usb-device vendor-id="6353" product-id="4100" />
+    <usb-device vendor-id="6353" product-id="4101" />
+    <usb-device vendor-id="6353" product-id="20506" />  <!-- 0x502A Fastboot -->
+    <usb-device vendor-id="6353" product-id="20507" />
+    <usb-device vendor-id="6353" product-id="20512" />  <!-- Pixel Fastboot -->
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  MEDIATEK (MTK) — Preloader / SP Flash                         -->
+    <!--  Vendor ID: 0x0E8D = 3725 (dec)                                -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <usb-device vendor-id="3725" />
+    <usb-device vendor-id="3725" product-id="3" />
+    <usb-device vendor-id="3725" product-id="2000" />
+    <usb-device vendor-id="3725" product-id="2001" />
+    <usb-device vendor-id="3725" product-id="3000" />
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  HUAWEI — HiSilicon Download Mode                               -->
+    <!--  Vendor ID: 0x12D1 = 4817 (dec)                                -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <usb-device vendor-id="4817" />
+
+    <!-- XIAOMI / POCO / REDMI -->
+    <usb-device vendor-id="10007" />
+
+    <!-- OnePlus -->
+    <usb-device vendor-id="10864" />
+
+    <!-- OPPO / Realme -->
+    <usb-device vendor-id="8921" />
+
+    <!-- Sony -->
+    <usb-device vendor-id="4046" />
+
+    <!-- LG -->
+    <usb-device vendor-id="4100" />
+
+    <!-- Motorola / Lenovo -->
+    <usb-device vendor-id="8888" />
+
+    <!-- HTC -->
+    <usb-device vendor-id="2996" />
+
+    <!-- Nokia / HMD -->
+    <usb-device vendor-id="1057" />
+
+    <!-- ASUS / ROG -->
+    <usb-device vendor-id="2821" />
+
+    <!-- ZTE -->
+    <usb-device vendor-id="6610" />
+
+    <!-- VIVO -->
+    <usb-device vendor-id="11669" />
+
+    <!-- Nothing Phone -->
+    <usb-device vendor-id="9047" />
+
+    <!-- UNISOC / Spreadtrum -->
+    <usb-device vendor-id="6018" />
+
+</resources>
