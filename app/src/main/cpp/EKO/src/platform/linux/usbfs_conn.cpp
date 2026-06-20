@@ -54,6 +54,16 @@
 
 #include <spdlog/spdlog.h>
 
+// ─────────────────────────────────────────────────────────────────────────────
+// USBDEVFS_URB_FLAG_ZERO_PACKET قد لا يكون معرّفًا في usbdevice_fs.h بتاع NDK
+// (الهيدر القديم اللي جاي مع بعض إصدارات الـ NDK مش فيه الفلاج ده، رغم إنه
+// مدعوم في كيرنل Android نفسه منذ زمن). نعرّفه يدويًا بنفس القيمة الرسمية
+// الموجودة في include/uapi/linux/usbdevice_fs.h بكيرنل لينكس upstream.
+// ─────────────────────────────────────────────────────────────────────────────
+#ifndef USBDEVFS_URB_FLAG_ZERO_PACKET
+#define USBDEVFS_URB_FLAG_ZERO_PACKET 0x0002
+#endif
+
 namespace eko::linux {
 
 namespace {
